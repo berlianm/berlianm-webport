@@ -202,14 +202,12 @@ header .navbar ul li a:hover{
   margin: 2rem;
 }
 .certification .box-container .box{
-  flex:1 1 30rem;
-  border-radius: .5rem;
-  box-shadow: 0 .7rem 1rem rgba(0,0,0,.3);
+  flex: 1 1 30rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   position: relative;
-  overflow:hidden;
-  height:30rem;
-  background: #fff;
-  border: none;
+  overflow: hidden;
+  height: 30rem;
 }
 .certification .box-container .box img{
   height: 100%;
@@ -270,6 +268,7 @@ header .navbar ul li a:hover{
   background: #310ae0f5;
 }
 
+
 @media screen and (max-width: 450px) {
   .certification .button-group{
     width: 100%;
@@ -278,7 +277,7 @@ header .navbar ul li a:hover{
     margin: 0rem;
   }
   .certification .box-container .grid-item .box{
-    width: 95% !important;
+    width: 105% !important;
   }
 }
 

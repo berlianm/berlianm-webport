@@ -29,75 +29,92 @@ document.addEventListener('visibilitychange',
         }
     });
 
-
 // fetch Certifications start
 function getCertifications() {
     return fetch("../certifications/certification.json")
         .then(response => response.json())
         .then(data => {
-            return data
+            return data;
         });
 }
 
+function showCertifications(certifications, start = 0, limit = 10) {
+    let certificationsContainer = document.querySelector(".certification .box-container");
+    let certificationsHTML = "";
 
-function showCertifications(Certifications) {
-    let CertificationsContainer = document.querySelector(".certification .box-container");
-    let CertificationsHTML = "";
-    Certifications.forEach(certification => {
-        CertificationsHTML += `
+    // Batasi jumlah data yang akan dirender untuk mencegah crash
+    const selectedCertifications = certifications.slice(start, start + limit);
+
+    selectedCertifications.forEach(certification => {
+        certificationsHTML += `
         <div class="grid-item ${certification.category}">
-        <div class="box tilt" style="width: 380px; margin: 1rem">
-      <img draggable="false" src="/assets/images/certifications/${certification.image}.png" alt="certification" />
-      <div class="content">
-        <div class="tag">
-            <h3>${certification.name}</h3>
-        </div>
-      </div>
-    </div>
-    </div>`;
+            <div class="box tilt">
+                <img draggable="false" src="/assets/images/certifications/${certification.image}.png" alt="certification" />
+                <div class="content">
+                    <div class="tag">
+                        <h3>${certification.name}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>`;
     });
-    CertificationsContainer.innerHTML = CertificationsHTML;
+
+    certificationsContainer.insertAdjacentHTML("beforeend", certificationsHTML);
+    
     VanillaTilt.init(document.querySelectorAll(".tilt"), { max: 15 });
 
-    // vanilla tilt.js
-    // VanillaTilt.init(document.querySelectorAll(".tilt"), {
-    //     max: 20,
-    // });
-    // // vanilla tilt.js  
-
-    // /* ===== SCROLL REVEAL ANIMATION ===== */
-    // const srtop = ScrollReveal({
-    //     origin: 'bottom',
-    //     distance: '80px',
-    //     duration: 1000,
-    //     reset: true
-    // });
-
-    // /* SCROLL Certifications */
-    // srtop.reveal('.work .box', { interval: 200 });
-
-    // isotope filter products
-    var $grid = $('.box-container').isotope({
-        itemSelector: '.grid-item',
-        layoutMode: 'fitRows',
-        masonry: {
-            columnWidth: 200
-        }
-    });
-
-    // filter items on button click
-    $('.button-group').on('click', 'button', function () {
-        $('.button-group').find('.is-checked').removeClass('is-checked');
-        $(this).addClass('is-checked');
-        var filterValue = $(this).attr('data-filter');
-        $grid.isotope({ filter: filterValue });
+    // Make sure Isotope is re-layout after adding elements
+    $('.box-container').imagesLoaded(function () {
+        var $grid = $('.box-container').isotope({
+            itemSelector: '.grid-item',
+            layoutMode: 'fitRows',
+            masonry: {
+                columnWidth: '.grid-item', // Atur columnWidth agar sesuai dengan card
+            }
+        });
+        
+        // Refresh layout to fix any misalignment issues
+        $grid.isotope('layout');
     });
 }
 
+// Lazy load more certifications when scrolling
+function setupLazyLoading(certifications) {
+    let currentIndex = 0;
+    const batchSize = 30; // Number of certifications to load at a time
+
+    function loadMore() {
+        if (currentIndex < certifications.length) {
+            showCertifications(certifications, currentIndex, batchSize);
+            currentIndex += batchSize;
+        }
+    }
+
+    // Initial load
+    loadMore();
+
+    // Set up scroll listener
+    window.addEventListener('scroll', () => {
+        if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 100)) {
+            loadMore();
+        }
+    });
+
+    // Continuously check if all data has loaded, otherwise keep loading
+    const intervalId = setInterval(() => {
+        if (currentIndex < certifications.length && document.body.scrollHeight <= window.innerHeight) {
+            loadMore();
+        } else {
+            clearInterval(intervalId); // Stop checking once all data is loaded
+        }
+    }, 500);
+}
+
 getCertifications().then(data => {
-    showCertifications(data);
-})
+    setupLazyLoading(data);
+});
 // fetch Certifications end
+
 
 
 // // disable developer mode
