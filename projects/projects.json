@@ -1,0 +1,110 @@
+[
+  {
+    "name": "RUBIST",
+    "desc": "Rubist is an app designed to help users detect types of waste and provide important information about them. In addition, the app also provides a forum feature that allows users to share stories, discuss, and upload posts related to waste and the environment.\n\nKEY FEATURES\n- Waste Type Detection: The Rubist app comes with the ability to detect the type of litter. Users can use their phone's camera or image from the gallery to take pictures of litter, and Rubist will provide information on the type of litter detected.\n\n- Important Information: After detecting the type of waste, Rubist will display important information related to the waste. This information includes a description of the waste, its environmental impact, proper disposal, whether or not the waste can be recycled, and how to recycle it.\n\n- Forum Feature: Rubist provides a forum feature that allows users to share stories, discuss, and upload posts related to waste and the environment. Users can upload images, write text, and interact with other users through comments.",
+    "image": "Rubist",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/berlianm/Rubist-Application.git"
+    }
+  },
+  {
+    "name": "MAI MELALI",
+    "desc": "Mai Melali is a web and mobile application designed to satisfy the information needs of tourists about Bali island beaches, providing complete information about Bali island beaches, locations, facilities, entrance fees, and activities or events held at these beaches. \n\nKEY FEATURES \n\n- Beach Information: This app provides detailed information about each beach on Bali Island, including the specific location, available facilities such as toilets, food stalls, and parking areas, entrance fees if any, as well as any special activities or events held at the beach. \n\n- Interactive Map: The interactive map feature allows users to easily locate the beach of interest, see the distance from the current location, and get the best route to reach the beach. \n\n- Reviews and Recommendations: Users can leave reviews about their experience at the beach, give ratings, and recommend their favorite beaches to other users. locations, facilities, entrance fees, and activities or events held at these beaches.",
+    "image": "maimelali",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/berlianm/MAI-MELALI.git"
+    }
+  },
+  {
+    "name": "ManganLur",
+    "desc": "ManganLur is a restaurant review application designed in console, GUI, and web form, allowing users to provide reviews and ratings of restaurants. Users can write comments, give ratings, and upload photos. The app also has search and filter features to find restaurants based on preferences such as location, cuisine type, and price. \n\nKEY FEATURES \n\n- User Reviews and Ratings: Pengguna dapat memberikan ulasan dan penilaian terhadap restoran yang mereka kunjungi. Pengguna dapat menulis komentar, memberi rating bintang, dan mengunggah foto makanan atau suasana restoran. Fitur ini bermanfaat dan relevan bagi pengguna lain yang sedang mencari rekomendasi restoran. \n\n- Restaurant Search and Filter: Pengguna dapat mencari restoran berdasarkan berbagai kriteria seperti lokasi, jenis masakan, rating, harga, dan lain-lain. Membantu pengguna menemukan restoran yang sesuai dengan preferensi mereka dengan cepat dan efisien. \n\n- User Profiles and Personalization: Pengguna dapat membuat profil, menyimpan restoran favorit, dan melihat riwayat ulasan yang telah mereka buat. Selain itu, aplikasi dapat memberikan rekomendasi restoran yang dipersonalisasi berdasarkan preferensi dan riwayat pencarian atau ulasan pengguna.",
+    "image": "manganlur",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/berlianm/ManganLur.git"
+    }
+  },
+  {
+    "name": "NgantriKuy",
+    "desc": "NgantriKuy is an application that solves real-world problems. Medical registration queues can be solved with a parallel and distributed system, which uses multiple computers to improve service efficiency by sharing the workload. The system application can reduce patient waiting time and improve overall patient satisfaction. The system and network architecture of a parallel and distributed system with RPC client-server consists of several components that are interconnected and work together to achieve certain goals, namely clients, servers, networks, parallel programs, and data.  Thus, a parallel and distributed system with RPC client-server can be an appropriate solution to improve the efficiency of medical registration queue services, but it is necessary to evaluate and understand the advantages and disadvantages of this solution, and implement it with appropriate security aspects.",
+    "image": "apotik",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/berlianm/NgantriKUY.git"
+    }
+  },
+  {
+    "name": "Sentiment Analysis of Timnas in World Cup Qualifiers using Bi-LSTM",
+    "desc": "This project analyzes public sentiment towards the performance of the Indonesian national team in the third round of World Cup qualification using the Bi-directional Long Short-Term Memory (Bi-LSTM) model. Data in the form of public comments or opinions from X social media (Twitter) were collected and analyzed to identify positive, negative, or neutral sentiments. The Bi-LSTM model was chosen due to its ability to better capture the context of word order in both directions, thus providing more accurate sentiment analysis results. The results of this project can provide insight into the public's perception of the national team's performance, which is useful for future evaluation and decision-making.",
+    "image": "SentimentAnalysis",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/berlianm/Sentiment-Analysis-of-the-Timnas-Performance-in-the-Third-Round-of-World-Cup-Qualifiers"
+    }
+  },
+  {
+    "name": "EDA to Predict Financial Statement Using Decision Tree",
+    "desc": "This project analyzes and predicts earnings in a company's financial statements (stocks) using a Decision Tree model. In the process, Exploratory Data Analysis (EDA) is conducted to understand the characteristics and patterns of the data, such as variable distribution, correlation between features, as well as outliers that may exist. The results of EDA are then used as the basis for building a Decision Tree-based predictive model, which is able to identify the main factors that affect earnings. This method provides a clearer and more accurate picture of the key elements that impact a company's financial performance.",
+    "image": "PredictFinancialStatement",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/berlianm/Financial-Statement-Revenue-Prediction"
+    }
+  },
+  {
+    "name": "Auto ML",
+    "desc": "Technological developments have resulted in a surge in data processing, artificial intelligence, and computing, enabling the emergence of Automated Machine Learning (AutoML) that automates the development of machine learning models. AutoML can be applied to Wisconsin Breast Cancer (Diagnostic) data to accelerate breast cancer detection. Using TPOT which utilizes Genetic Algorithm to find the best pipeline, data pre-processing such as data cleansing is required. Experimental results show that Default TPOT and Limit Time TPOT achieve 99% accuracy, but Limit Time TPOT is about 10 minutes faster in finding the best pipeline.",
+    "image": "automl",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/berlianm/Automated-Machine-Learning/blob/main/AutoML_Kelompok_29.ipynb"
+    }
+  },
+  {
+    "name": "HUMIC Survey Dashboard",
+    "desc": "The HUMIC Survey Dashboard is a digital web platform designed to collect, manage and analyze survey data related to user satisfaction. This platform is used by HUMIC Research Center agencies to obtain feedback from users on various aspects of their services.\n\nKey Features:\n-Interactive Survey Form:\nUsers easily fill out surveys through an intuitive and user-friendly interface, helping to ensure that respondents can provide their input more effectively and efficiently.\n\n-Attractive Visual Display:\nThe dashboard displays the survey results in an attractive and easy-to-understand visual form. Graphs, charts, and other data visualizations help the HUMIC team to quickly analyze and understand the feedback provided by users.\n\n-User Satisfaction Data Collection and Processing:\nCollect data from survey forms and process it to produce a complete and in-depth report. This data becomes a valuable source of information that the HUMIC team can use to improve their service quality based on user feedback.",
+    "image": "humic",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/berlianm/Dashboard-Survey-HUMIC/tree/master"
+    }
+  },
+  {
+    "name": "Genetic Algoritm",
+    "desc": "This project focuses on finding the values of 𝑥 and 𝑦 that minimize a certain function using Genetic Algorithm and implementing it in a computer program. Genetic Algorithm is a search technique in computer science used to find optimization solutions with evolutionary biology techniques such as inheritance, mutation, natural selection, and recombination. One of the main functions of GA is to find the minimum value of a complex mathematical function.",
+    "image": "GA",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/berlianm/Genetic-Algorithm/blob/main/Coding%20GA_Kelompok07_IF4410.ipynb"
+    }
+  },
+  {
+    "name": "Mininet Simulation",
+    "desc": "Currently, traditional constraints in the routing process are related to rigid configurations and depend on specific vendor devices. This makes it difficult to change network configurations flexibly and efficiently. Mininet, as an SDN network emulator, offers a solution by enabling large and flexible network simulation on a laptop, with configuration capabilities similar to physical devices and customizable speed and delay settings. Although statistical results and iPerf tests did not show any significant differences, ping tests between hosts showed that increasing buffers can cause a slowdown in response time.",
+    "image": "mininetsimulasi",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/berlianm/MAI-MELALI.git"
+    }
+  },
+  {
+    "name": "Context Free Grammar (CFG)",
+    "desc": "Context Free Grammar (CFG) is a method for generating strings in a language with variable symbols representing the underived parts of the string. Unlike regular grammars, CFG allows underived parts to occur anywhere in the string. Once the derivation is complete, all the underived parts are replaced by strings from the set of terminal symbols. CFG is used as a basis in the parser generation or syntax analysis process. Parts of syntax in compilers are often defined using context-free grammars. In this project, a simple CFG is created for the representation of rules or sentence syntax in Batak language.",
+    "image": "CFG",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/berlianm/Lexical-Analysis-Parser/blob/main/Kelompok%2014%20-%20Parser.py"
+    }
+  },
+  {
+    "name": "Queue Simulation",
+    "desc": "The case study focuses on the simulation of queuing systems in bank services, specifically on the use of ATM (Automated Teller Machine) machines. We assume that there is one ATM machine that serves a number of customers. Customers come in certain time intervals to perform their transactions/needs. We designed this simulation to understand the performance of customer queues using ATM machines, measuring the average waiting time of customers, as well as the average number of customers in the queue over a certain period of time. Thus, we can analyze and understand how the queuing system in this bank service operates and how efficient the system is in serving customers.",
+    "image": "ATM",
+    "links": {
+      "view": "#",
+      "code": "https://github.com/berlianm/Implementation-Queueing-System/blob/main/Queueing_System_with_MM1.ipynb"
+    }
+  }
+]
