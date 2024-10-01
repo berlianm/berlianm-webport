@@ -2,7 +2,7 @@
   {
     "name": "RUBIST",
     "desc": "Rubist is an app designed to help users detect types of waste and provide important information about them. In addition, the app also provides a forum feature that allows users to share stories, discuss, and upload posts related to waste and the environment.\n\nKEY FEATURES\n- Waste Type Detection: The Rubist app comes with the ability to detect the type of litter. Users can use their phone's camera or image from the gallery to take pictures of litter, and Rubist will provide information on the type of litter detected.\n\n- Important Information: After detecting the type of waste, Rubist will display important information related to the waste. This information includes a description of the waste, its environmental impact, proper disposal, whether or not the waste can be recycled, and how to recycle it.\n\n- Forum Feature: Rubist provides a forum feature that allows users to share stories, discuss, and upload posts related to waste and the environment. Users can upload images, write text, and interact with other users through comments.",
-    "image": "Rubist",
+    "image": "rubist",
     "links": {
       "view": "#",
       "code": "https://github.com/berlianm/Rubist-Application.git"
