@@ -8,7 +8,7 @@
   text-decoration: none;
   outline: none;
   border: none;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   transition: all 0.2s linear;
 }
 html {
@@ -645,6 +645,30 @@ header .navbar ul li a:hover {
   font-weight: 700;
 }
 
+/* Tambahan CSS untuk elemen list */
+.education .box-container .box .content ul {
+  list-style-type: disc;
+  padding-left: 3rem;
+  text-align: left;
+}
+
+.education .box-container .box .content ul li {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  color: #333;
+  font-family: "Nunito", sans-serif;
+}
+
+.education .box-container .box .content ul li::marker {
+  color: #012970; /* Warna marker */
+}
+
+/* Tambahan hover effect untuk list */
+.education .box-container .box .content ul li:hover {
+  color: #012970;
+  font-weight: 600;
+}
+
 /* Modal Styling */
 .modal {
   display: none; 
@@ -850,7 +874,7 @@ header .navbar ul li a:hover {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
-  height: 30rem;
+  height: 27rem;
 }
 .work .box-container .box img {
   height: 100%;
@@ -861,7 +885,7 @@ header .navbar ul li a:hover {
   height: 100%;
   width: 100%;
   position: absolute;
-  top: 77%;
+  top: 71%;
   left: 0;
   background: rgba(255, 255, 255, 0.9);
   display: flex;
@@ -872,7 +896,7 @@ header .navbar ul li a:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 7rem;
+  height: 8rem;
   width: 100%;
   background: #ffd900;
 }
@@ -881,7 +905,7 @@ header .navbar ul li a:hover {
   text-align: center;
 }
 .work .box-container .box:hover .content {
-  top: 45%;
+  top: 30%;
 }
 .work .desc {
   margin: 2rem;
@@ -1566,15 +1590,16 @@ form .button-area {
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .swiper-container {
-  overflow: hidden;
   margin-top: 50px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   width: 80%;
   height: 350px;
-  position: relative;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  padding-bottom: 15px;
 }
 
 @media (max-width: 450px) {
@@ -1730,7 +1755,7 @@ form .button-area {
 .publication .box-container .box {
   display: flex;
   flex-direction: row;
-  width: 90%;
+  width: 10 0%;
   border-radius: 0.5rem;
   box-shadow: 0.2rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
   text-align: center;
@@ -1828,10 +1853,10 @@ form .button-area {
 .service-card {
   position: relative;
   width: 100%;
-  max-width: 270px;
+  max-width: 250px;
   height: 230px;
   margin: 20px;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
