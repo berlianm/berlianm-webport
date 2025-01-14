@@ -120,7 +120,16 @@ function showSkills(skills) {
 function showProjects(projects) {
     let projectsContainer = document.querySelector("#work .box-container");
     let projectHTML = "";
-    projects.slice(0, 9).forEach((project, index) => {
+
+    // Tentukan jumlah proyek yang ditampilkan berdasarkan ukuran layar
+    let sliceCount;
+    if (window.matchMedia("(min-width: 1920px)").matches) {
+        sliceCount = 8; // Untuk monitor besar (24 inch atau lebih)
+    } else {
+        sliceCount = 9; // Untuk laptop dan layar lebih kecil
+    }
+
+    projects.slice(0, sliceCount).forEach((project, index) => {
         projectHTML += `
         <div class="box tilt">
             <img draggable="false" src="/assets/images/projects/${project.image}.png" alt="project" />
@@ -135,11 +144,11 @@ function showProjects(projects) {
                 </div>
                 </div>
             </div>
-        </div>`
+        </div>`;
     });
-    // <p>${project.desc}</p>
+
     projectsContainer.innerHTML = projectHTML;
-    
+
     // Tambahkan event listener untuk tombol "View Detail Project"
     document.querySelectorAll('.view-detail-btn').forEach(button => {
         button.addEventListener('click', function() {
@@ -149,11 +158,13 @@ function showProjects(projects) {
         });
     });
 
+    // Inisialisasi efek tilt dan scroll reveal
     VanillaTilt.init(document.querySelectorAll(".tilt"), { max: 15 });
 
     const srtop = ScrollReveal({ origin: 'top', distance: '80px', duration: 1000, reset: true });
     srtop.reveal('.work .box', { interval: 200 });
 }
+
 
 // Fungsi untuk menampilkan modal dengan detail project
 function showModal(project) {
@@ -186,7 +197,16 @@ function showModal(project) {
 function showCertification(certification) {
     let certificationContainer = document.querySelector("#certification .box-container");
     let certificationHTML = "";
-    certification.slice(0, 9).forEach((certif) => {
+
+    // Tentukan jumlah sertifikasi yang ditampilkan berdasarkan ukuran layar
+    let sliceCount;
+    if (window.matchMedia("(min-width: 1920px)").matches) {
+        sliceCount = 8; // Untuk monitor besar (24 inch atau lebih)
+    } else {
+        sliceCount = 9; // Untuk laptop dan layar lebih kecil
+    }
+
+    certification.slice(0, sliceCount).forEach((certif) => {
         certificationHTML += `
         <div class="box tilt">
             <img draggable="false" src="/assets/images/certifications/${certif.image}.png" alt="certification" />
@@ -195,16 +215,24 @@ function showCertification(certification) {
                     <h3>${certif.name}</h3>
                 </div>
             </div>
-        </div>`
+        </div>`;
     });
-    // <p>${project.desc}</p>
+
     certificationContainer.innerHTML = certificationHTML;
 
+    // Inisialisasi efek tilt dan scroll reveal
     VanillaTilt.init(document.querySelectorAll(".tilt"), { max: 15 });
 
     const srtop = ScrollReveal({ origin: 'top', distance: '80px', duration: 1000, reset: true });
     srtop.reveal('.work .box', { interval: 200 });
 }
+
+// Tambahkan event listener untuk memantau perubahan ukuran layar
+window.addEventListener("resize", () => {
+    // location.reload();
+    showProjects(projects); // Panggil ulang fungsi saat ukuran layar berubah
+    showCertification(certification); // Panggil ulang fungsi sertifikasi saat ukuran layar berubah
+});
 
 
 fetchData().then(data => {
